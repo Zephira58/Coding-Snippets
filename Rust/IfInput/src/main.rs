@@ -3,10 +3,9 @@ use std::{thread, time::Duration};
 fn main(){
     loop{
     print!("{esc}c", esc = 27 as char);
+    
     let mut line = String::new();
-    
     println!("Will you help the man? (Y/N)");
-    
     std::io::stdin().read_line(&mut line).unwrap();
     
     let Y = "Y";
