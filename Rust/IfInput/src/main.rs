@@ -7,13 +7,13 @@ fn main(){
     let mut line = String::new();
     println!("Will you help the man? (Y/N)");
     std::io::stdin().read_line(&mut line).unwrap();
-    
+    let line = line.trim();
+
     let Y = "Y";
     let y = "y";
     let N = "N";
     let n = "n";
     
-    let line = line.trim();
     print!("{esc}c", esc = 27 as char);
     
     
