@@ -10,19 +10,21 @@ fn main(){
 
     let mut result: u32 = 0;
     let nums = [8, 7, 2, 5, 3, 1];
-
+    let mut pair = false;
     for i in 0..nums.len() { 
         for j in 0..nums.len() { 
-            println!("{:?}{:?}",i,j);
+            //println!("{:?}{:?}",nums[i],nums[j]);
             result = nums[i] + nums[j];
-
             if result == target { 
-            println!("pair found ({}, {})", nums[i], nums[j]); 
+                pair = true;
+                println!("pair found ({}, {})", nums[i], nums[j]); 
             } 
+            
             else { 
             result = 0;
             }
         }
     }
+    if pair == false { println!("pair found not found");}
     thread::sleep(Duration::from_secs(5))
 }
