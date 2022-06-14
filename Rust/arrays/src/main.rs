@@ -1,7 +1,6 @@
 use std::{thread, time::Duration};
 
 fn main(){
-
     let mut target= 0;
     let mut input = String::new();
     println!("Enter the sum you wish to calculate");
@@ -19,7 +18,6 @@ fn main(){
                 pair = true;
                 println!("pair found ({}, {})", nums[i], nums[j]); 
             } 
-            
             else { 
             result = 0;
             }
