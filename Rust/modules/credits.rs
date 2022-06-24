@@ -1,5 +1,4 @@
 
-
 pub fn credits(){
     println!("Made by Xanthus In their spare time");
     println!("Check out my other works at https://github.com/Xanthus58");
