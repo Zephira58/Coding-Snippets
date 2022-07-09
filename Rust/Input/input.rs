@@ -1,11 +1,7 @@
-use std::{thread, time::Duration};
-
-fn main(){
-    print!("\x1B[2J");
-    let mut line = String::new();
-    println!("Enter your name:");
-    let _b1 = std::io::stdin().read_line(&mut line).unwrap();
-    println!("Hello, {}", line);
-    thread::sleep(Duration::from_secs(5));
-    
+fn input(){
+    print!("{esc}c", esc = 27 as char); ;//Clears the screen
+    let mut line = String::new();//Assigns a variable to a new empty string 
+    println!("Enter your name:");//Prompts the user for input
+    let _b1 = std::io::stdin().read_line(&mut line).unwrap();//Reads the user inputted string and writes it to the line variable
+    println!("Hello, {}", line);//Prints the result
 }
