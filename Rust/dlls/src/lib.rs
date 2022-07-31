@@ -11,3 +11,14 @@ pub fn math(num1: f32, num2: f32) -> String {
         num1, num2, add, num1, num2, sub, num1, num2, mul, num1, num2, div, num1, num2, modulo
     );
 }
+
+// Program made by Xanths58
+// Check out my other works at https://xanthus58.github.io/Xanthus58/
+// or https://github.com/Xanthus58
+
+pub fn credits() {
+    println!("\n-Credits-");
+    println!("Made by Xanthus58");
+    println!("Check out my other works at https://xanthus58.github.io/Xanthus58/");
+    println!("or https://github.com/Xanthus58\n");
+}
