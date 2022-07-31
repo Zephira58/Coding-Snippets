@@ -1,3 +1,5 @@
+#![crate_type = "cdylib"]
+
 mod lib;
 use crate::lib::*;
 use std::io;
