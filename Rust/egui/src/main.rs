@@ -65,37 +65,10 @@ impl eframe::App for MyApp {
                 egui::ScrollArea::vertical().show(ui, |ui| { //Adds a scrollbar to anything nested in here
                     ui.label(&format!("Hello {}! You are {} years old.", self.name, self.age)); // Prints a message to the screen
                     if self.checkbox {
-                        ui.label("Theres a scrollbar on the right");
-                        ui.label("Theres a scrollbar on the right");
-                        ui.label("Theres a scrollbar on the right");
-                        ui.label("Theres a scrollbar on the right");
-                        ui.label("Theres a scrollbar on the right");
-                        ui.label("Theres a scrollbar on the right");
-                        ui.label("Theres a scrollbar on the right");
-                        ui.label("Theres a scrollbar on the right");
-                        ui.label("Theres a scrollbar on the right");
-                        ui.label("Theres a scrollbar on the right");
-                        ui.label("Theres a scrollbar on the right");
-                        ui.label("Theres a scrollbar on the right");
-                        ui.label("Theres a scrollbar on the right");
-                        ui.label("Theres a scrollbar on the right");
-                        ui.label("Theres a scrollbar on the right");
-                        ui.label("Theres a scrollbar on the right");
-                        ui.label("Theres a scrollbar on the right");
-                        ui.label("Theres a scrollbar on the right");
-                        ui.label("Theres a scrollbar on the right");
-                        ui.label("Theres a scrollbar on the right");
-                        ui.label("Theres a scrollbar on the right");
-                        ui.label("Theres a scrollbar on the right");
-                        ui.label("Theres a scrollbar on the right");
-                        ui.label("Theres a scrollbar on the right");
-                        ui.label("Theres a scrollbar on the right");
-                        ui.label("Theres a scrollbar on the right");
-                        ui.label("Theres a scrollbar on the right");
-                        ui.label("Theres a scrollbar on the right");
-                        ui.label("Theres a scrollbar on the right");
-                        ui.label("Theres a scrollbar on the right");
-
+                        ui.separator();
+                        for i in 0..100 { // Prints a message to the screen 100 times
+                            ui.label(&format!("Theres a scrollbar on the right"));
+                        }
                     }
                 });
         });
