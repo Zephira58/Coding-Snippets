@@ -19,6 +19,7 @@ fn main() {
     println!("Hello, Welcome to a simple DLL library test.");
     println!("Included in the DLL is a simple program that calculates all the different math variations of 2 numbers.");
     println!("While the program handles gathering user inputs and displaying the results to the screen.\n");
+    println!("While the program handles gathering user inputs and displaying the results to the screen.\n");
     
     //get user input as a number
     println!("Enter a number: ");

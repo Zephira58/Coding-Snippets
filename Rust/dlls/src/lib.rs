@@ -21,4 +21,5 @@ pub fn credits() {
     println!("Made by Xanthus58");
     println!("Check out my other works at https://xanthus58.github.io/Xanthus58/");
     println!("or https://github.com/Xanthus58\n");
+    println!("This program is open source and licensed under the MIT license.");
 }
