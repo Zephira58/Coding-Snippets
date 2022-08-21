@@ -16,6 +16,7 @@ struct MyApp {
     name: String,
     age: i32,
     checkbox: bool,
+    test: String,
 }
 
 impl Default for MyApp { //defaults for your global values
@@ -25,6 +26,7 @@ impl Default for MyApp { //defaults for your global values
             name: "".to_string(),
             age: 0,
             checkbox: false,
+            test: "".to_string(),
         }
     }
 }
@@ -48,10 +50,10 @@ impl eframe::App for MyApp {
             let checkbox = ui.checkbox(&mut self.checkbox, "Click a checkbox"); // Renders a checkbox on the screen
 
             if checkbox.clicked() { // Makes the checkbox clickable and changes the value of the checkbox when clicked
-                self.checkbox = true; // The "self" prefix is uses to access the global value
+                ui.toggle_value(&mut self.checkbox, "text"); // Toggles the value of the checkbox
             };
             if checkbox.secondary_clicked() {
-                self.checkbox = false;
+                self.checkbox = false; // The "self" prefix is uses to access the global value
             };
             ui.separator(); // Adds a separator 
 
@@ -61,6 +63,29 @@ impl eframe::App for MyApp {
                 if ui.button("Add").clicked() { // Makes a button that adds 1 to the age value
                     self.age += 1;
                 };
+
+                let response = ui.button("Open popup"); // Makes a button that opens a popup
+                let popup_id = ui.make_persistent_id("my_unique_id");
+
+                if response.clicked() {
+                    ui.memory().toggle_popup(popup_id);
+                }
+                egui::popup::popup_below_widget(ui, popup_id, &response, |ui| {
+                    //The contents of the popup go here
+                    ui.set_min_width(200.0); // if you want to control the size
+                    ui.label("This is an example of a popup window");
+                    ui.text_edit_multiline(&mut self.test);
+
+                    //How to make a tooltip
+                    if ui.ui_contains_pointer() {
+                        egui::show_tooltip(ui.ctx(), egui::Id::new("my_tooltip"), |ui| {
+                            //The contents of the tooltip go here
+                            ui.label("Demo tooltip");
+                        });
+                    }
+                });
+
+
 
                 egui::ScrollArea::vertical().show(ui, |ui| { //Adds a scrollbar to anything nested in here
                     ui.label(&format!("Hello {}! You are {} years old.", self.name, self.age)); // Prints a message to the screen
