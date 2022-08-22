@@ -37,6 +37,10 @@ impl eframe::App for MyApp {
             ui.style_mut().visuals = Visuals::dark(); // Makes the buttons dark
             ctx.set_visuals(egui::Visuals::dark()); // Make the ui dark
 
+            egui::warn_if_debug_build(ui); // Warns if debug build
+            ctx.request_repaint(); // Keep updating frame
+            ui.separator();
+            
             ui.horizontal(|ui| { // Makes whatevers nested in here side by side
                 ui.label("Enter your name: "); // Essentily prints a message to the screen
                 ui.text_edit_singleline(&mut self.name); // Makes a text edit box
