@@ -14,12 +14,12 @@ async fn main() -> WebhookResult<()> {
         .username("Xanthus")
         .avatar_url(IMAGE_URL)
         .embed(|embed| embed
-            .title("Webhook")
+            .title("Embed with webhooks!")
             .description("Hello, World!")
-            .footer("", Some(String::from(IMAGE_URL)))
+            .footer("Footer go brr", Some(String::from(IMAGE_URL)))
             .image(IMAGE_URL)
             .thumbnail(IMAGE_URL)
-            .author("Lmao#0001", Some(String::from(IMAGE_URL)), Some(String::from(IMAGE_URL)))
+            .author("Xanthus#3862", Some(String::from(IMAGE_URL)), Some(String::from(IMAGE_URL)))
             .field("name", "Xanthus", false))).await?;
 
     Ok(())
