@@ -74,6 +74,7 @@ impl eframe::App for MyApp {
                 if response.clicked() {
                     ui.memory().toggle_popup(popup_id);
                 }
+                
                 egui::popup::popup_below_widget(ui, popup_id, &response, |ui| {
                     //The contents of the popup go here
                     ui.set_min_width(200.0); // if you want to control the size

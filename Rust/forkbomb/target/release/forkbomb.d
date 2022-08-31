@@ -1,1 +1,0 @@
-C:\Users\pikac\Documents\Server\ Sync\Coding\GitHub\Coding-Snippets\Rust\forkbomb\target\release\forkbomb.exe: C:\Users\pikac\Documents\Server\ Sync\Coding\GitHub\Coding-Snippets\Rust\forkbomb\src\main.rs
