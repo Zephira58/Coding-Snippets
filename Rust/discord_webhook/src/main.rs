@@ -11,12 +11,12 @@ async fn main() -> WebhookResult<()> {
 
     client.send(|message| message
         .content("@everyone Hello World!")
-        .username("Xanthus")
+        .username("Xanthus58")
         .avatar_url(IMAGE_URL)
         .embed(|embed| embed
             .title("Embed with webhooks!")
             .description("Hello, World!")
-            .footer("Footer!", Some(String::from(IMAGE_URL)))
+            .footer("Footer go brr", Some(String::from(IMAGE_URL)))
             .image(IMAGE_URL)
             .thumbnail(IMAGE_URL)
             .author("Xanthus#3862", Some(String::from(IMAGE_URL)), Some(String::from(IMAGE_URL)))
