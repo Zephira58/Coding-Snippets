@@ -11,7 +11,7 @@ async fn main() -> WebhookResult<()> {
 
     client.send(|message| message
         .content("@everyone Hello World!")
-        .username("Xanthus")
+        .username("Xanthus58")
         .avatar_url(IMAGE_URL)
         .embed(|embed| embed
             .title("Embed with webhooks!")
