@@ -14,4 +14,5 @@ def func():
     
 btn=Button(win,text="Click Me", width=10,height=5,command=func)
 btn.place(x=200,y=30)
-win.mainloop() #running the loop that works as a trigger
+#running the loop that works as a trigger
+win.mainloop() 
