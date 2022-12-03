@@ -1,0 +1,4 @@
+find . -depth -exec sh -c '
+    t=${0%/*}/$(printf %s "${0##*/}" | tr "[:upper:]" "[:lower:]");
+    [ "$t" = "$0" ] || mv -i "$0" "$t"
+' {} \;
