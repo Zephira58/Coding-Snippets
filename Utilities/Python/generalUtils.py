@@ -4,6 +4,7 @@ import time
 
 def clearTerminal():
     os.system('cls||clear')
+    
 def credits(projectName: str):
     clearTerminal()
     print("Made by Xanthus In my spare time\n")
