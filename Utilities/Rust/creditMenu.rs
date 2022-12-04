@@ -1,6 +1,6 @@
 pub fn credits(){
     
-    println!("Made by Xanthus In their spare time");
+    println!("Made by @Xanthus58 (on github) In my spare time");
     println!("Check out my other works at https://github.com/Xanthus58");
     println!("Email me on 'Xanthus58@protonmail.com'");
     println!("Feel free to fork; submit issues; or otherwise interact with the project!");

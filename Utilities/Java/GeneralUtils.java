@@ -1,4 +1,4 @@
-package info.Xan.Utils;
+package info.General.Utils;
 
 import java.text.NumberFormat;
 import java.time.LocalDateTime;
@@ -11,7 +11,7 @@ import java.util.Scanner;
  * @author bjmaclean
  * @since Oct 19, 2021
  */
-public class XanUtils {
+public class GeneralUtils {
 
     private static Scanner input = new Scanner(System.in);
 
