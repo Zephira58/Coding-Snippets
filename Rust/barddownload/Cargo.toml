@@ -1,0 +1,9 @@
+[package]
+name = "bard_downloader"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+tokio = { version = "1", features = ["full"] }
+reqwest = { version = "0.11", features = ["stream"] }
+futures = "0.3"
